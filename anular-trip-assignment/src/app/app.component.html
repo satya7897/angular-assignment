@@ -4,7 +4,7 @@
     <input type="text" [(ngModel)]="startPoint" placeholder="Start Point" />
     <input type="text" [(ngModel)]="endPoint" placeholder="End Point" />
     <button (click)="addTrip()">Add Trip</button>
-    <button (click)="clearTrip()">clear Trip</button>
+    <button (click)="clearTrip()">Clear Trip</button>
   </div>
 
   <div class="chart-container" *ngIf="trips && trips.length > 0">

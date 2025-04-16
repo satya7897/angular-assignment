@@ -1,0 +1,161 @@
+/* ===== Global Reset & Base Styling ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f8fbff, #e3f2fd);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* ===== Centering Wrapper ===== */
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* ===== Input Form Styling ===== */
+  .trip-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+  }
+  
+  input {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+    width: 220px;
+    transition: border 0.3s ease;
+    background-color: #f4f8fb;
+  }
+  
+  input:focus {
+    border-color: #42a5f5;
+    outline: none;
+    background-color: #ffffff;
+  }
+  
+  button {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #42a5f5, #478ed1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: linear-gradient(45deg, #1e88e5, #1669bb);
+  }
+  
+  /* ===== Trip Chart Container ===== */
+  .chart-container {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 0;
+    margin: 0 auto 40px;
+    max-width: 1000px;
+    width: 100%;
+    height: 320px;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e3e8ef;
+  }
+  
+  /* ===== Each Trip Block ===== */
+  .trip {
+    position: absolute;
+    width: 180px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .label {
+    /* background: #ffffff;
+    border-radius: 12px; */
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #42a5f5; */
+  }
+  
+  /* ===== Track Line Styles ===== */
+  .line {
+    height: 2px;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .level-1 .line {
+    background: linear-gradient(90deg, #66bb6a, #81c784);
+  }
+  
+  .level-1-5 .line {
+    background: linear-gradient(90deg, #ffb300, #ffc947);
+  }
+  
+  .level-2 .line {
+    background: linear-gradient(90deg, #29b6f6, #81d4fa);
+  }
+  
+  /* ===== Arrow Design ===== */
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 9px solid #ffa000;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    position: absolute;
+    right: -9px;
+    top: -3px;
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .trip-form {
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
+  
+    .trip {
+      width: 130px;
+    }
+  
+    .label {
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    .chart-container {
+      height: 380px;
+    }
+  }
+  
